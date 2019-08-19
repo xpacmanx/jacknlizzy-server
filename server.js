@@ -23,6 +23,7 @@ router.get('/markers', async (ctx, next) => {
 
 router.post('/add', async (ctx, next) => {
     console.log('add input');
+    console.log(ctx.request.body);
     var result = await markers.insert(ctx.request.body);
     ctx.body = {result: 'success'};
 });
