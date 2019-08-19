@@ -9,6 +9,7 @@ const app = new Koa();
 var router = new Router();
 
 app.use(bodyParser());
+app.use(json());
 app.use(router.routes())
     .use(router.allowedMethods());
 
