@@ -8,9 +8,10 @@ const markers = new Datastore('data.json');
 const app = new Koa();
 var router = new Router();
 
+app.use(bodyParser());
 app.use(router.routes())
-    .use(router.allowedMethods())
-    .use(bodyParser());
+    .use(router.allowedMethods());
+
 
 router.get('/', (ctx, next) => {
     ctx.body = {test: 1};
@@ -22,11 +23,11 @@ router.get('/markers', async (ctx, next) => {
 });
 
 router.post('/add', async (ctx, next) => {
-    console.log('add input');
-    console.log(ctx);
     var result = await markers.insert(ctx.request.body);
     ctx.body = {result: 'success'};
 });
+
+
 
 app.listen(3000);
 console.log('listen 3000');
