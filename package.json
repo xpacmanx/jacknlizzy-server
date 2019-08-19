@@ -1,0 +1,26 @@
+{
+  "name": "jacknlizzy-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xpacmanx/jacknlizzy-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xpacmanx/jacknlizzy-server/issues"
+  },
+  "homepage": "https://github.com/xpacmanx/jacknlizzy-server#readme",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "nedb": "^1.8.0",
+    "nedb-promises": "^4.0.0"
+  }
+}
