@@ -1,6 +1,7 @@
 const Koa = require('koa');
 const Router = require('koa-router');
 const bodyParser = require('koa-bodyparser');
+const json = require('koa-json');
 const fs = require('fs');
 const Datastore = require('nedb-promises');
 const markers = new Datastore('data.json');
